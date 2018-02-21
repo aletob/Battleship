@@ -1,0 +1,186 @@
+$table-color: #00ab0c;
+$text-color: #ff9a00;
+$dark-background: #000000;
+$header-background: rgba(51,51,51,0.6);
+$header-text: #cc3300;
+$info-color: #f5f5f5;
+$boardHeader: #cc3300;
+$small-headers: #eca72c;
+$hover-button: #990000;
+$menu-play: #2af73b;
+$menu-cancel: #990000;
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+	background-image: url(tlo.png); /* from http://subtlepatterns.com */
+	color: $text-color;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.container{
+	height: auto;
+}
+
+header{
+	height: 15vh;
+	margin: 2vh;
+	h1{
+		margin: 0 auto;
+		padding: 2vh;
+		color: $header-text;
+		font-weight: bold;
+		font-size: 4vh;
+		letter-spacing: 2px;
+		text-align: center;
+		background-color: $header-background;
+	}
+}
+	
+.interaction{
+	float: left;
+	padding: 2vh 3vh;
+	width: 50%;
+	font-size: 2vh;
+	text-align: center;
+	color: $small-headers;
+	form{
+		padding: 1vh;
+		margin: 0 auto;
+		width: auto;
+	}
+	button{
+		border-radius: 1vh;
+		padding: 1vh 2vh;
+		font-weight: bold;
+		border: none;
+		color: $dark-background;
+		background-color: $table-color;
+		transition-duration: 0.6s;
+	}
+	button:hover{
+		color: $dark-background;
+		background-color: $hover-button;
+	}
+}
+	
+
+.info{
+	height: 100%;
+	width: 50%;
+	text-align: center;
+	font-size: 2vh;
+	float: left;
+	padding: 4vh;
+	color: $info-color;
+}
+
+form input {
+background-color: #827782;
+}
+
+.board{
+	clear: both;
+	float: left;
+	margin-bottom: 1vh;
+}
+
+.shipBoard {
+    border-collapse: collapse;
+    margin: 0 auto;
+    td, th { 
+	  width: 9vmin;
+	  height: 9vmin;
+	  border: 3px solid $table-color;
+	  background-color: $dark-background;
+	  text-align: center;
+	}
+	th {
+		background-image: url(tlo.png);
+		font-weight: bold;
+		vertical-align: middle;
+		border: none;
+		color: $boardHeader;
+		transition-duration: 0.3s;
+	}
+}
+
+.specification{
+	margin: 0 auto;
+	padding: 10vh 2vh 4vh 4vh;
+	float: left;
+}
+
+.shipList{
+	padding: 1vh;
+	td{
+		width: 4vmin;
+		height: 4vmin;
+		border: none;
+		text-align: center;
+	}
+}
+
+
+// Icon made by Freepik from www.flaticon.com 
+
+.hidden{
+	background-image: url('icons/hiddenShip.png');
+	background-size: contain;   
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.hit{
+	background-image: url('icons/hitShip.png');
+	background-size: contain;   
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.sunk{
+	background-image: url('icons/sunkShip.png');
+	background-size: contain;   
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.miss{
+	background-image: url('icons/miss.png');
+	background-size: contain;   
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.inactive{
+	opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.restart, .goHome{
+	font-weight: bold;
+	font-size: 2vh;
+	opacity:0.5;
+	border-radius: 2vh;
+	margin: 1vh 3vh;
+}
+
+.restart{
+	background: $menu-play;
+}
+
+.goHome{
+	background: $menu-cancel;
+}
+
+.dontPlay{
+	font-size: 8vh;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	margin: 20vh auto;
+	padding: 10vh;
+}
